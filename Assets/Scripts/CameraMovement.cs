@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class CameraMovement : MonoBehaviour
 {
-    public GameObject goBall;
+    public GameObject PlayerBall;
 
     public enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
     public RotationAxes axes = RotationAxes.MouseXAndY;
@@ -39,7 +39,7 @@ public class Camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = goBall.transform.position;
+        transform.position = PlayerBall.transform.position;
 
         if (axes == RotationAxes.MouseXAndY)
         {
