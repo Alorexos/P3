@@ -4,13 +4,24 @@ using UnityEngine;
 
 public class LevelGateway : MonoBehaviour
 {
+    // Visisble varaibles
+    [SerializeField]
+    private Vector3 Offset;
+
     // Hidden varaibles
-    private GameObject PlayerBall;
+    private GameObject PlayerSphere;
+    private Ball SphereScript;
+    private GameStats Stats;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        Stats = GameStats.Instance;
+        PlayerSphere = GameObject.Find("Ball");
+        if (gameObject.name == gameObject.name.Substring(0, gameObject.name.Length - 1) + Stats.GetLevel())
+        {
+            SetupLevel();
+        }
     }
 
     // Update is called once per frame
@@ -21,27 +32,21 @@ public class LevelGateway : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject NextEntrance;
-        int NextLevel; 
-        Ball BallScript;
+        if(other.gameObject.tag != "Player") return;
 
-        if(other.gameObject.tag != "Player") return; 
+        Stats.SetLevel();
+        SetupLevel();
+    }
+    private void SetupLevel()
+    {
+        GameObject Entrance;
+        Entrance = GameObject.Find("LevelEntrance_" + Stats.GetLevel());
 
-        BallScript = other.gameObject.GetComponent<Ball>();
-
-        //Find Next Level
-        NextLevel = BallScript.GetLevel() + 1;
-        Debug.Log(BallScript.GetLevel());
-        NextEntrance = GameObject.Find("LevelEntrance_" + NextLevel.ToString());
-        if (!NextEntrance) return;
+        if (!Entrance) return;
 
         //Relocate Player Ball
-        other.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0.0f,0.0f,0.0f);
-        other.gameObject.transform.position = NextEntrance.transform.position;
-
-
-        //Increase Level
-        BallScript.IncreaseLevel();
+        PlayerSphere.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        PlayerSphere.transform.position = Entrance.transform.position + Offset;
 
     }
 }

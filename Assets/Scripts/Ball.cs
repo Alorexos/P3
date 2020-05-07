@@ -14,8 +14,6 @@ public class Ball : MonoBehaviour
     private float StopFriction;
     [SerializeField]
     private int MaxCollisions; 
-    [SerializeField]
-    private int Level;
 
 
     // Hidden varaibles
@@ -33,7 +31,7 @@ public class Ball : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
 
         if (Input.GetMouseButtonDown(0) && BallBody.velocity.x < 0.01f && BallBody.velocity.y < 0.01f)
@@ -50,16 +48,6 @@ public class Ball : MonoBehaviour
             //}
         }
         
-    }
-
-    public int GetLevel()
-    {
-        return Level;
-    }
-
-    public void IncreaseLevel()
-    {
-        Level++;
     }
 
     private void OnCollisionEnter(Collision collision)
