@@ -28,7 +28,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.229
+    m_Value: 0.378
     min: 0
     max: 1
   smoothness:
@@ -76,7 +76,7 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 1
   multiplier:
     m_OverrideState: 0
     m_Value: 1
@@ -305,6 +305,7 @@ MonoBehaviour:
   - {fileID: -4548561072712914708}
   - {fileID: 3825293794691616478}
   - {fileID: -2411936527520580185}
+  - {fileID: 1249376611128708719}
 --- !u!114 &759157799867122262
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -429,6 +430,29 @@ MonoBehaviour:
   rectLightShadow:
     m_OverrideState: 0
     m_Value: 0
+--- !u!114 &1249376611128708719
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5ab44aadfb1804db5fd470983ac1b8, type: 3}
+  m_Name: LiftGammaGain
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  lift:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: -0.04538589}
+  gamma:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: -0.090771556}
+  gain:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 0.30257183}
 --- !u!114 &3352498622874550046
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -463,7 +487,7 @@ MonoBehaviour:
     showEyeDropper: 1
   maxFogDistance:
     m_OverrideState: 1
-    m_Value: 5000
+    m_Value: 4997.7
     min: 0
   mipFogMaxMip:
     m_OverrideState: 0
@@ -480,30 +504,30 @@ MonoBehaviour:
     min: 0
   baseHeight:
     m_OverrideState: 1
-    m_Value: -59.4
+    m_Value: 3.1
   maximumHeight:
     m_OverrideState: 0
     m_Value: 2618.5
   albedo:
     m_OverrideState: 1
-    m_Value: {r: 0.45937166, g: 0.7072163, b: 0.8773585, a: 1}
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 53.9
+    m_Value: 19.49
     min: 1
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
   anisotropy:
     m_OverrideState: 1
-    m_Value: -0.792
+    m_Value: 0.147
     min: -1
     max: 1
   globalLightProbeDimmer:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
     min: 0
     max: 1
@@ -535,7 +559,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   meteringMode:
     m_OverrideState: 0
     m_Value: 2

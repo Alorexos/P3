@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Walls
+  m_Name: M_MetalWall
   m_Shader: {fileID: -6465566751694194690, guid: 23528d40f4a3a6646b2670af18d0620d,
     type: 3}
   m_ShaderKeywords: _ALPHATEST_ON _BLENDMODE_ALPHA _DOUBLESIDED_ON _ENABLE_FOG_ON_TRANSPARENT
@@ -29,15 +29,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - AlbedoMap:
-        m_Texture: {fileID: 2800000, guid: d0b8f484eb51eb24b965d291e5b5d85f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 784e3461bece48c45805b2441677930f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - MRAMap:
-        m_Texture: {fileID: 2800000, guid: 39dd98012d5736c4eaec9450ea0b6ca9, type: 3}
+        m_Texture: {fileID: 2800000, guid: c3629e35b13ff21448da86f168f41aa8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - NormalMap:
-        m_Texture: {fileID: 2800000, guid: 2caf1fbf7db61ca4fb5583a1b6da00ab, type: 3}
+        m_Texture: {fileID: 2800000, guid: ef6601b43fa504b4e82904fe46610a03, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
@@ -126,16 +126,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - AO_Multiply: 1
-    - AO_Power: 0
-    - Metalness_Multiply: 1
-    - Metalness_Power: 1
+    - AO_Power: 1
+    - Metalness_Multiply: 4
+    - Metalness_Power: 0.75
     - Roughness_Multiply: 1
-    - Roughness_Power: 1
-    - Vector1_2DDD7C9D: 0.2
+    - Roughness_Power: 0.23
+    - Vector1_2DDD7C9D: 0.1667
     - Vector1_4DA88734: 1.15
     - Vector1_C6D9D967: 14.27
-    - Vector1_DB890B02: 1
-    - Vector1_F9C72128: 2.46
+    - Vector1_DB890B02: 0
+    - Vector1_F9C72128: 1.05
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -258,8 +258,8 @@ Material:
     - _ZTestTransparent: 2
     - _ZWrite: 1
     m_Colors:
-    - Vector2_97429939: {r: 1, g: 1, b: 1, a: 1}
-    - Vector2_E31029C9: {r: -0.96, g: 2.3, b: 1, a: 1}
+    - Vector2_97429939: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_E31029C9: {r: 5, g: 5, b: 5, a: 5}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
