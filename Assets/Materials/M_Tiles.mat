@@ -143,10 +143,9 @@ Material:
     - Roughness_Multiply: 1.04
     - Roughness_Power: 1
     - Vector1_2DDD7C9D: 0.25
-    - Vector1_4DA88734: 90.3
-    - Vector1_C6D9D967: 9.22
+    - Vector1_4DA88734: 0
+    - Vector1_C6D9D967: 0
     - Vector1_DB890B02: 0
-    - Vector1_F9C72128: 0
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
