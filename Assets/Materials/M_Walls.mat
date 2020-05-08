@@ -29,15 +29,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - AlbedoMap:
-        m_Texture: {fileID: 2800000, guid: d0b8f484eb51eb24b965d291e5b5d85f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2aeae7054982c4a40ac41ffb96e4184c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - MRAMap:
-        m_Texture: {fileID: 2800000, guid: 39dd98012d5736c4eaec9450ea0b6ca9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7c17b233c8bcdcb4ba8e88cdd9e5ee60, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - NormalMap:
-        m_Texture: {fileID: 2800000, guid: 2caf1fbf7db61ca4fb5583a1b6da00ab, type: 3}
+        m_Texture: {fileID: 2800000, guid: be30921f5d9548040a3503390f23a780, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
@@ -131,7 +131,7 @@ Material:
     - Metalness_Power: 1
     - Roughness_Multiply: 5.13
     - Roughness_Power: 0.23
-    - Vector1_2DDD7C9D: 0.2
+    - Vector1_2DDD7C9D: 0.1655
     - Vector1_4DA88734: 1.15
     - Vector1_C6D9D967: 14.27
     - Vector1_DB890B02: 0
