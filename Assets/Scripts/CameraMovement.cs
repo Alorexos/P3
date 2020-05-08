@@ -39,8 +39,6 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 forward = transform.TransformDirection(Vector3.forward) * 2;
-        Debug.DrawRay(transform.position, forward, Color.green);
         transform.position = PlayerBall.transform.position;
 
         if (axes == RotationAxes.MouseXAndY)
