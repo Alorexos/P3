@@ -5,20 +5,17 @@ using UnityEngine;
 public class LevelGateway : MonoBehaviour
 {
     // Visisble varaibles
-    [SerializeField]
-    private Vector3 Offset;
 
     // Hidden varaibles
     private GameObject PlayerSphere;
-    private Ball SphereScript;
     private GameStats Stats;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         Stats = GameStats.Instance;
         PlayerSphere = GameObject.Find("Ball");
-        if (gameObject.name == gameObject.name.Substring(0, gameObject.name.Length - 1) + Stats.GetLevel())
+        if (gameObject.name == "PF_LevelExit_" + Stats.GetLevel())
         {
             SetupLevel();
         }
@@ -40,13 +37,15 @@ public class LevelGateway : MonoBehaviour
     private void SetupLevel()
     {
         GameObject Entrance;
-        Entrance = GameObject.Find("LevelEntrance_" + Stats.GetLevel());
+        Entrance = GameObject.Find("PF_LevelEntrance_" + Stats.GetLevel());
 
         if (!Entrance) return;
 
+        Debug.Log(PlayerSphere);
         //Relocate Player Ball
-        PlayerSphere.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        PlayerSphere.transform.position = Entrance.transform.position + Offset;
+        PlayerSphere.GetComponent<SphereController>().ResetSphere();
+        PlayerSphere.transform.position = Entrance.transform.position;
+
 
     }
 }
