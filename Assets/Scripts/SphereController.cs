@@ -22,8 +22,6 @@ public class SphereController : MonoBehaviour
     private int CollisionCount;
     private float SpeedPerSec; 
     private float StopTimer;
-
-
     private Vector3 CurrentVelocity;
 
 
@@ -54,10 +52,6 @@ public class SphereController : MonoBehaviour
             StopTimer = Mathf.Max(0.0f,StopTimer - Time.deltaTime);
             BallBody.velocity = CurrentVelocity.normalized * SpeedPerSec * StopTimer;
         }
-        else if (Input.GetMouseButtonDown(0))
-        {
-            BallBody.velocity = PlayerCamera.transform.forward * Speed;
-        }
     }
 
     private void OnCollisionEnter(Collision other)
@@ -86,4 +80,17 @@ public class SphereController : MonoBehaviour
         StopTimer = 0.0f;
         BallBody.velocity = Vector3.zero;
     }
+
+    public void SetVelocity(Vector3 Direction)
+    {
+        if (BallBody.velocity == Vector3.zero)
+        {
+            BallBody.velocity = Direction * Speed;
+        }
+    }
+    public Vector3 GetVelocity()
+    {
+        return BallBody.velocity;
+    }
+
 }

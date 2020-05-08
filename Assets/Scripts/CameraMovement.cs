@@ -39,96 +39,94 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 forward = transform.TransformDirection(Vector3.forward) * 2;
-        Debug.DrawRay(transform.position, forward, Color.green);
         transform.position = PlayerBall.transform.position;
 
-        if (axes == RotationAxes.MouseXAndY)
-        {
-            rotAverageY = 0f;
-            rotAverageX = 0f;
+        //if (axes == RotationAxes.MouseXAndY)
+        //{
+        //    rotAverageY = 0f;
+        //    rotAverageX = 0f;
 
-            rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-            rotationX += Input.GetAxis("Mouse X") * sensitivityX;
+        //    rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+        //    rotationX += Input.GetAxis("Mouse X") * sensitivityX;
 
-            rotArrayY.Add(rotationY);
-            rotArrayX.Add(rotationX);
+        //    rotArrayY.Add(rotationY);
+        //    rotArrayX.Add(rotationX);
 
-            if (rotArrayY.Count >= frameCounter)
-            {
-                rotArrayY.RemoveAt(0);
-            }
-            if (rotArrayX.Count >= frameCounter)
-            {
-                rotArrayX.RemoveAt(0);
-            }
+        //    if (rotArrayY.Count >= frameCounter)
+        //    {
+        //        rotArrayY.RemoveAt(0);
+        //    }
+        //    if (rotArrayX.Count >= frameCounter)
+        //    {
+        //        rotArrayX.RemoveAt(0);
+        //    }
 
-            for (int j = 0; j < rotArrayY.Count; j++)
-            {
-                rotAverageY += rotArrayY[j];
-            }
-            for (int i = 0; i < rotArrayX.Count; i++)
-            {
-                rotAverageX += rotArrayX[i];
-            }
+        //    for (int j = 0; j < rotArrayY.Count; j++)
+        //    {
+        //        rotAverageY += rotArrayY[j];
+        //    }
+        //    for (int i = 0; i < rotArrayX.Count; i++)
+        //    {
+        //        rotAverageX += rotArrayX[i];
+        //    }
 
-            rotAverageY /= rotArrayY.Count;
-            rotAverageX /= rotArrayX.Count;
+        //    rotAverageY /= rotArrayY.Count;
+        //    rotAverageX /= rotArrayX.Count;
 
-            rotAverageY = ClampAngle(rotAverageY, minimumY, maximumY);
-            rotAverageX = ClampAngle(rotAverageX, minimumX, maximumX);
+        //    rotAverageY = ClampAngle(rotAverageY, minimumY, maximumY);
+        //    rotAverageX = ClampAngle(rotAverageX, minimumX, maximumX);
 
-            Quaternion yQuaternion = Quaternion.AngleAxis(rotAverageY, Vector3.left);
-            Quaternion xQuaternion = Quaternion.AngleAxis(rotAverageX, Vector3.up);
+        //    Quaternion yQuaternion = Quaternion.AngleAxis(rotAverageY, Vector3.left);
+        //    Quaternion xQuaternion = Quaternion.AngleAxis(rotAverageX, Vector3.up);
 
-            transform.localRotation = originalRotation * xQuaternion * yQuaternion;
-        }
-        else if (axes == RotationAxes.MouseX)
-        {
-            rotAverageX = 0f;
+        //    transform.localRotation = originalRotation * xQuaternion * yQuaternion;
+        //}
+        //else if (axes == RotationAxes.MouseX)
+        //{
+        //    rotAverageX = 0f;
 
-            rotationX += Input.GetAxis("Mouse X") * sensitivityX;
+        //    rotationX += Input.GetAxis("Mouse X") * sensitivityX;
 
-            rotArrayX.Add(rotationX);
+        //    rotArrayX.Add(rotationX);
 
-            if (rotArrayX.Count >= frameCounter)
-            {
-                rotArrayX.RemoveAt(0);
-            }
-            for (int i = 0; i < rotArrayX.Count; i++)
-            {
-                rotAverageX += rotArrayX[i];
-            }
-            rotAverageX /= rotArrayX.Count;
+        //    if (rotArrayX.Count >= frameCounter)
+        //    {
+        //        rotArrayX.RemoveAt(0);
+        //    }
+        //    for (int i = 0; i < rotArrayX.Count; i++)
+        //    {
+        //        rotAverageX += rotArrayX[i];
+        //    }
+        //    rotAverageX /= rotArrayX.Count;
 
-            rotAverageX = ClampAngle(rotAverageX, minimumX, maximumX);
+        //    rotAverageX = ClampAngle(rotAverageX, minimumX, maximumX);
 
-            Quaternion xQuaternion = Quaternion.AngleAxis(rotAverageX, Vector3.up);
-            transform.localRotation = originalRotation * xQuaternion;
-        }
-        else
-        {
-            rotAverageY = 0f;
+        //    Quaternion xQuaternion = Quaternion.AngleAxis(rotAverageX, Vector3.up);
+        //    transform.localRotation = originalRotation * xQuaternion;
+        //}
+        //else
+        //{
+        //    rotAverageY = 0f;
 
-            rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+        //    rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
 
-            rotArrayY.Add(rotationY);
+        //    rotArrayY.Add(rotationY);
 
-            if (rotArrayY.Count >= frameCounter)
-            {
-                rotArrayY.RemoveAt(0);
-            }
-            for (int j = 0; j < rotArrayY.Count; j++)
-            {
-                rotAverageY += rotArrayY[j];
-            }
-            rotAverageY /= rotArrayY.Count;
+        //    if (rotArrayY.Count >= frameCounter)
+        //    {
+        //        rotArrayY.RemoveAt(0);
+        //    }
+        //    for (int j = 0; j < rotArrayY.Count; j++)
+        //    {
+        //        rotAverageY += rotArrayY[j];
+        //    }
+        //    rotAverageY /= rotArrayY.Count;
 
-            rotAverageY = ClampAngle(rotAverageY, minimumY, maximumY);
+        //    rotAverageY = ClampAngle(rotAverageY, minimumY, maximumY);
 
-            Quaternion yQuaternion = Quaternion.AngleAxis(rotAverageY, Vector3.left);
-            transform.localRotation = originalRotation * yQuaternion;
-        }
+        //    Quaternion yQuaternion = Quaternion.AngleAxis(rotAverageY, Vector3.left);
+        //    transform.localRotation = originalRotation * yQuaternion;
+        //}
 
     }
 
