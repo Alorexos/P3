@@ -13,7 +13,8 @@ public class CrystalController : MonoBehaviour
     private float MouseSensitivity;
     [SerializeField]
     private float CrystalHideDelay;
-
+    [SerializeField]
+    private GameObject Crystal;
 
     //Hidden Varaibles
     private GameObject Sphere;
@@ -24,7 +25,7 @@ public class CrystalController : MonoBehaviour
 
     private void Awake()
     {
-        CrystalRenderer = GetComponent<Renderer>();
+        CrystalRenderer = Crystal.GetComponent<Renderer>();
         Sphere = GameObject.Find("Ball");
         SphereScript = Sphere.GetComponent<SphereController>();
     }
