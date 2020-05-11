@@ -18,19 +18,18 @@ public class CrystalController : MonoBehaviour
 
     //Hidden Varaibles
     private GameObject Sphere;
-    private SphereController SphereScript;
+    private SphereMovement SphereMovement;
     private float MousePosX;
-    private bool CrystalActive = false;
     private Renderer CrystalRenderer;
 
     private void Awake()
     {
         CrystalRenderer = Crystal.GetComponent<Renderer>();
-        Sphere = GameObject.Find("Ball");
-        SphereScript = Sphere.GetComponent<SphereController>();
+        Sphere = GameObject.FindGameObjectWithTag("Player");
+        SphereMovement = Sphere.GetComponent<SphereMovement>();
     }
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         
     }
@@ -40,9 +39,8 @@ public class CrystalController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            SphereScript.SetVelocity(gameObject.transform.forward);
+            SphereMovement.SetVelocity(gameObject.transform.forward);
             StartCoroutine(HideCrystal(CrystalHideDelay));
-            CrystalActive = false;
         }
 
         if (Input.GetMouseButtonDown(0))
@@ -64,9 +62,8 @@ public class CrystalController : MonoBehaviour
             }
         }
 
-        if(SphereScript.GetVelocity() == Vector3.zero)
+        if(SphereMovement.GetVelocity() == Vector3.zero && !CrystalRenderer.enabled)
         {
-            CrystalActive = true;
             transform.position = new Vector3(Sphere.transform.position.x, 0.0f, Sphere.transform.position.z);
             CrystalRenderer.enabled = true;
         }

@@ -42,7 +42,7 @@ public class LevelGateway : MonoBehaviour
         if (!Entrance) return;
 
         //Relocate Player Ball
-        PlayerSphere.GetComponent<SphereController>().ResetSphere();
+        PlayerSphere.GetComponent<SphereMovement>().ResetSphere();
         PlayerSphere.transform.position = Entrance.transform.position;
 
 
