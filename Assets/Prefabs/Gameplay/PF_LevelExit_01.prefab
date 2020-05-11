@@ -214,7 +214,6 @@ GameObject:
   - component: {fileID: 3156057463856251958}
   - component: {fileID: 6239622065336385024}
   - component: {fileID: 408453584273507065}
-  - component: {fileID: 4486133394336956506}
   - component: {fileID: 1699596586196282986}
   m_Layer: 0
   m_Name: PF_LevelExit_01
@@ -286,18 +285,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4486133394336956506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2132393204577318437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c8cc253793eec44a9c1e81df5d1bbaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1699596586196282986
 BoxCollider:
   m_ObjectHideFlags: 0

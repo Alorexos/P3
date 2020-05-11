@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.8085555, g: 0.86927724, b: 0.85773265, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -635,9 +635,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1838081334}
   - {fileID: 513391648}
   - {fileID: 1767867697}
-  - {fileID: 1838081334}
   - {fileID: 333672500}
   m_Father: {fileID: 1478276714}
   m_RootOrder: 2
@@ -989,6 +989,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_LevelEntrance_2
       objectReference: {fileID: 0}
+    - target: {fileID: 407282644760652846, guid: 1eb7d3c39ff1ead4793a9613a69b4b85,
+        type: 3}
+      propertyPath: m_TagString
+      value: LevelSpawn
+      objectReference: {fileID: 0}
     - target: {fileID: 407282644760652848, guid: 1eb7d3c39ff1ead4793a9613a69b4b85,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1027,7 +1032,7 @@ PrefabInstance:
     - target: {fileID: 407282644760652848, guid: 1eb7d3c39ff1ead4793a9613a69b4b85,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 407282644760652848, guid: 1eb7d3c39ff1ead4793a9613a69b4b85,
         type: 3}
@@ -1669,7 +1674,7 @@ Transform:
   - {fileID: 659170016}
   - {fileID: 1654833175}
   m_Father: {fileID: 1961344486}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &400779983
 GameObject:
@@ -1685,8 +1690,9 @@ GameObject:
   - component: {fileID: 400779989}
   - component: {fileID: 400779988}
   - component: {fileID: 400779984}
+  - component: {fileID: 400779990}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: Sphere
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1798,6 +1804,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!114 &400779990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400779983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75716b42bf8e71c43ae61b2693fae695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &420477615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1899,6 +1917,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF_LevelExit_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132393204577318437, guid: 8141c216c8cd9bc49a881890f6951028,
+        type: 3}
+      propertyPath: m_TagString
+      value: LevelEnd
       objectReference: {fileID: 0}
     - target: {fileID: 3156057463856251958, guid: 8141c216c8cd9bc49a881890f6951028,
         type: 3}
@@ -2603,7 +2626,7 @@ Transform:
   - {fileID: 2061067338}
   - {fileID: 1103868281}
   m_Father: {fileID: 176138494}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &535915844
 PrefabInstance:
@@ -2846,7 +2869,7 @@ Transform:
   - {fileID: 827976811}
   - {fileID: 325231224}
   m_Father: {fileID: 1152413023}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &554248197
 PrefabInstance:
@@ -4736,6 +4759,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_LevelExit_3
       objectReference: {fileID: 0}
+    - target: {fileID: 2132393204577318437, guid: 8141c216c8cd9bc49a881890f6951028,
+        type: 3}
+      propertyPath: m_TagString
+      value: LevelEnd
+      objectReference: {fileID: 0}
     - target: {fileID: 3156057463856251958, guid: 8141c216c8cd9bc49a881890f6951028,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5046,6 +5074,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_LevelExit_2
       objectReference: {fileID: 0}
+    - target: {fileID: 2132393204577318437, guid: 8141c216c8cd9bc49a881890f6951028,
+        type: 3}
+      propertyPath: m_TagString
+      value: LevelEnd
+      objectReference: {fileID: 0}
     - target: {fileID: 3156057463856251958, guid: 8141c216c8cd9bc49a881890f6951028,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5084,7 +5117,7 @@ PrefabInstance:
     - target: {fileID: 3156057463856251958, guid: 8141c216c8cd9bc49a881890f6951028,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3156057463856251958, guid: 8141c216c8cd9bc49a881890f6951028,
         type: 3}
@@ -6094,7 +6127,7 @@ Transform:
   m_Children:
   - {fileID: 1705130885}
   m_Father: {fileID: 2032485648}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -6849,10 +6882,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 832519213}
   - {fileID: 236557817}
+  - {fileID: 832519213}
   m_Father: {fileID: 1961344486}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1059514793
 PrefabInstance:
@@ -7409,6 +7442,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_LevelEntrance_4
       objectReference: {fileID: 0}
+    - target: {fileID: 407282644760652846, guid: 1eb7d3c39ff1ead4793a9613a69b4b85,
+        type: 3}
+      propertyPath: m_TagString
+      value: LevelSpawn
+      objectReference: {fileID: 0}
     - target: {fileID: 407282644760652848, guid: 1eb7d3c39ff1ead4793a9613a69b4b85,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7674,10 +7712,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1180703368}
   - {fileID: 1371372520}
   - {fileID: 541956512}
   - {fileID: 1756144221}
-  - {fileID: 1180703368}
   - {fileID: 1507477615}
   - {fileID: 756551762}
   m_Father: {fileID: 1478276714}
@@ -7798,7 +7836,7 @@ Transform:
   - {fileID: 979262834}
   - {fileID: 910851819516089554}
   m_Father: {fileID: 1152413023}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1181626632
 GameObject:
@@ -8539,7 +8577,7 @@ Transform:
   - {fileID: 1943196677}
   - {fileID: 912193210}
   m_Father: {fileID: 1152413023}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1378973496
 PrefabInstance:
@@ -10422,7 +10460,7 @@ Transform:
   - {fileID: 1762983682}
   - {fileID: 834941467}
   m_Father: {fileID: 1961344486}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1591640375
 PrefabInstance:
@@ -11069,7 +11107,7 @@ Transform:
   - {fileID: 1107147903}
   - {fileID: 438680994}
   m_Father: {fileID: 2032485648}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1641899051
 PrefabInstance:
@@ -11476,6 +11514,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF_LevelEntrance_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 407282644760652846, guid: 1eb7d3c39ff1ead4793a9613a69b4b85,
+        type: 3}
+      propertyPath: m_TagString
+      value: LevelSpawn
       objectReference: {fileID: 0}
     - target: {fileID: 407282644760652848, guid: 1eb7d3c39ff1ead4793a9613a69b4b85,
         type: 3}
@@ -11950,7 +11993,7 @@ Transform:
   - {fileID: 1150174482}
   - {fileID: 1399424223}
   m_Father: {fileID: 1152413023}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1762983681
 PrefabInstance:
@@ -12073,7 +12116,7 @@ Transform:
   - {fileID: 1294894062}
   - {fileID: 466127101}
   m_Father: {fileID: 176138494}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1772670866
 GameObject:
@@ -12120,7 +12163,7 @@ Transform:
   - {fileID: 853732408}
   - {fileID: 926877315}
   m_Father: {fileID: 2032485648}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1791899855
 PrefabInstance:
@@ -12654,7 +12697,7 @@ Transform:
   - {fileID: 1693431141}
   - {fileID: 777824168}
   m_Father: {fileID: 176138494}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1844934839
 PrefabInstance:
@@ -13775,9 +13818,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1046451452}
   - {fileID: 1577184887}
   - {fileID: 396215005}
-  - {fileID: 1046451452}
   m_Father: {fileID: 1478276714}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13811,7 +13854,7 @@ Transform:
   - {fileID: 1438639510}
   - {fileID: 1181626633}
   m_Father: {fileID: 2032485648}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1973877556
 GameObject:
@@ -14420,10 +14463,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1636060185}
   - {fileID: 1962064724}
   - {fileID: 1772670867}
   - {fileID: 956593644}
-  - {fileID: 1636060185}
   - {fileID: 393662876}
   m_Father: {fileID: 1478276714}
   m_RootOrder: 3
@@ -15436,6 +15479,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_LevelEntrance_1
       objectReference: {fileID: 0}
+    - target: {fileID: 407282644760652846, guid: 1eb7d3c39ff1ead4793a9613a69b4b85,
+        type: 3}
+      propertyPath: m_TagString
+      value: LevelSpawn
+      objectReference: {fileID: 0}
     - target: {fileID: 407282644760652848, guid: 1eb7d3c39ff1ead4793a9613a69b4b85,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15510,6 +15558,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PF_LevelExit_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2132393204577318437, guid: 8141c216c8cd9bc49a881890f6951028,
+        type: 3}
+      propertyPath: m_TagString
+      value: LevelEnd
       objectReference: {fileID: 0}
     - target: {fileID: 3156057463856251958, guid: 8141c216c8cd9bc49a881890f6951028,
         type: 3}
