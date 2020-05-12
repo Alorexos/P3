@@ -35,7 +35,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - NormalMap:
-        m_Texture: {fileID: 2800000, guid: af48151104dc4f84a854d15986b26848, type: 3}
+        m_Texture: {fileID: 2800000, guid: a7009bc6b96e90b4e90fc2aaa765c8a4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
@@ -130,8 +130,8 @@ Material:
     - Roughness_Multiply: 1
     - Roughness_Power: 1
     - Vector1_2DDD7C9D: 1
-    - Vector1_4DA88734: 0
-    - Vector1_C6D9D967: 0
+    - Vector1_4DA88734: 6
+    - Vector1_C6D9D967: 325
     - Vector1_DB890B02: 0
     - Vector1_F9C72128: 0
     - _AORemapMax: 1
