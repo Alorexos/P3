@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Tiles
+  m_Name: M_PatternedTiles
   m_Shader: {fileID: -6465566751694194690, guid: 23528d40f4a3a6646b2670af18d0620d,
     type: 3}
   m_ShaderKeywords: 
@@ -40,15 +40,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - AlbedoMap:
-        m_Texture: {fileID: 2800000, guid: 784e3461bece48c45805b2441677930f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 302a35f216e236243bc50902a9ccd4f8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - MRAMap:
-        m_Texture: {fileID: 2800000, guid: c3629e35b13ff21448da86f168f41aa8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5325374779d401e4fadf7353b440fec4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - NormalMap:
-        m_Texture: {fileID: 2800000, guid: ef6601b43fa504b4e82904fe46610a03, type: 3}
+        m_Texture: {fileID: 2800000, guid: 121411f5122aa134da0427814f87b90f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
@@ -140,9 +140,9 @@ Material:
     - AO_Power: 1
     - Metalness_Multiply: 0.2
     - Metalness_Power: 1
-    - Roughness_Multiply: 0.62
+    - Roughness_Multiply: 0.42
     - Roughness_Power: 0.58
-    - Vector1_2DDD7C9D: 0.1667
+    - Vector1_2DDD7C9D: 0.25
     - Vector1_4DA88734: 1
     - Vector1_C6D9D967: 15
     - Vector1_DB890B02: 0
